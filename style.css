@@ -44,6 +44,17 @@ main {
 body {
     background-color: hsl(0, 0%, 85%);
 }
+h1{
+    font-size: 3em;
+}
+@media (max-width: 600px){
+    h1{
+        font-size: 2rem;
+    }
+    #boxes{
+        font-size: 10em;
+    }
+}
 #h3 {
     display: flex;
     font-family: monospace;
