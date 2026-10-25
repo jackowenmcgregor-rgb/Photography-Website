@@ -1,3 +1,7 @@
+//run right away
+if (localStorage.getItem("darkMode") === "enabled"){
+    document.body.classList.add("darkMode")
+}
 //input
 const mySubmit = document.getElementById("mySubmit");
 if(mySubmit){
@@ -58,27 +62,53 @@ if(submit){
 //animation
 const box = document.getElementById("box");
 
-window.addEventListener("load", () => {
-    box.style.pointerEvents = "none";
-    box.classList.add("slideUp");
-});
+if(box){
+    window.addEventListener("load", () => {
+        box.style.pointerEvents = "none";
+        box.classList.add("slideUp");
+    });
 
-box.addEventListener("animationend", (event) => {
-    if (event.animationName === "slideUp") {
-        box.classList.remove("slideUp");
-        box.style.pointerEvents = "auto";
-    }
-});
+    box.addEventListener("animationend", (event) => {
+        if (event.animationName === "slideUp") {
+            box.classList.remove("slideUp");
+            box.style.pointerEvents = "auto";
+        }
+    });
+}
 const box2 = document.getElementById("box2");
 
-window.addEventListener("load", () => {
-    box2.style.pointerEvents = "none";
-    box2.classList.add("slideLeft");
-});
+if(box2){
+    window.addEventListener("load", () => {
+        box2.style.pointerEvents = "none";
+        box2.classList.add("slideLeft");
+    });
 
-box2.addEventListener("animationend", (event) => {
-    if (event.animationName === "slideLeft") {
-        box2.classList.remove("slideLeft");
-        box2.style.pointerEvents = "auto";
+    box2.addEventListener("animationend", (event) => {
+        if (event.animationName === "slideLeft") {
+            box2.classList.remove("slideLeft");
+            box2.style.pointerEvents = "auto";
+        }
+    });
+}
+//settings
+const darkModeBtn = document.getElementById("darkModeBtn");
+
+if (darkModeBtn) {
+    if (document.body.classList.contains("darkMode")) {
+        darkModeBtn.textContent = "Light Mode";
+    } else {
+        darkModeBtn.textContent = "Dark Mode";
     }
-});
+
+    darkModeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("darkMode");
+        
+        if (document.body.classList.contains("darkMode")) {
+            localStorage.setItem("darkMode", "enabled");
+            darkModeBtn.textContent = "Light Mode";
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+            darkModeBtn.textContent = "Dark Mode";
+        }
+    });
+}
