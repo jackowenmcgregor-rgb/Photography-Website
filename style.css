@@ -1,11 +1,50 @@
-body{
-    background-color: hsl(0, 0%, 90%)
+body.darkMode {
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 90%);
 }
-main{
+body.darkMode #h3,
+body.darkMode #myH1,
+body.darkMode .text {
+    color: hsl(0, 0%, 90%);
+}
+body.darkMode .navbar a {
+    color: hsl(0, 0%, 90%);
+}
+body.darkMode .navbar a:hover {
+    background-color: hsl(0, 0%, 15%);
+    color: white;
+}
+body.darkMode .dropdown .content {
+    background-color: hsl(0, 0%, 20%);
+    box-shadow: 2px 2px 5px hsl(0, 0%, 0%);
+}
+body.darkMode .dropdown a {
+    color: hsl(0, 0%, 90%);
+}
+body.darkMode .dropdown a:hover {
+    background-color: hsl(0, 0%, 30%);
+}
+body.darkMode .dropdown button {
+    background-color: hsl(0, 0%, 25%);
+    color: hsl(0, 0%, 90%);
+}
+body.darkMode .dropdown button:hover {
+    background-color: hsl(0, 0%, 35%);
+}
+body.darkMode .contact{
+    color: hsla(216, 100%, 70%, 0.938);
+}
+body.darkMode #about{
+    color: hsl(0, 0%, 90%);
+}
+main {
     margin-left: 20px;
     margin-right: 20px;
 }
-#h3{
+body {
+    background-color: hsl(0, 0%, 85%);
+}
+#h3 {
     display: flex;
     font-family: monospace;
     align-items: center;
@@ -16,121 +55,121 @@ main{
     padding: 35px;
     font-size: 50px;
 }
-.images img{
+.images img {
     display: block;
     width: 100%;
     height: auto;
     margin-top: 50px;
 }
-.images{
+.images {
     width: 200px;
     margin: 5px;
 }
-
-.images:hover{
+.images:hover {
     filter: brightness(85%);
     transition: ease 0.2s;
 }
-.gallery{
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
     margin: 0 auto;
 }
-.navbar ul{
+.navbar ul {
     list-style-type: none;
     background-color: hsl(0, 0%, 25%);
     padding: 0px;
     margin: 0px;
-    overflow: hidden
+    overflow: hidden;
 }
-.navbar a{
+.navbar a {
     text-decoration: none;
     color: white;
     display: block;
     text-align: center;
     padding: 15px;
 }
-.navbar a:hover{
+.navbar a:hover {
     background-color: hsl(0, 0%, 15%);
 }
-.navbar li{float: left;
+.navbar li {
+    float: left;
 }
-.navbar{
+.navbar {
     position: sticky;
 }
-.contact{
+.contact {
     color: rgb(45, 45, 255);
 }
-.about a{
+.about a {
     text-decoration: none;
     color: black;
     cursor: pointer;
 }
-.about{
+.about {
     font-size: x-large;
 }
-.dropdown{
+.dropdown {
     display: inline-block;
 }
-.dropdown a{
+.dropdown a {
     display: block;
     padding: 10px 15px;
 }
-.dropdown .content{
+.dropdown .content {
     display: none;
     position: absolute;
     background-color: hsl(0, 0%, 90%);
     min-width: 100px;
     box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.7);
 }
-.dropdown:hover .content{
+.dropdown:hover .content {
     display: block;
 }
-.dropdown button{
+.dropdown button {
     border: none;
     background-color: hsl(0, 0%, 75%);
 }
-.dropdown button:hover{
+.dropdown button:hover {
     background-color: hsl(0, 0%, 65%);
 }
-.dropdown a:hover{
-    background-color: hsl(0, 0%, 70%)
+.dropdown a:hover {
+    background-color: hsl(0, 0%, 70%);
 }
-.text{
+.text {
     padding: 50px;
     font-size: x-large;
 }
-.text input{
+.text input {
     min-height: 25px;
 }
-#input{
+#input {
     padding-top: 15px;
     font-family: monospace;
     font-weight: bolder;
     font-size: 25px;
 }
-#mySubmit{
+#mySubmit {
     border: none;
     background-color: hsl(0, 0%, 80%);
     font-size: 15px;
 }
-#mySubmit:hover{
+#mySubmit:hover {
     filter: brightness(85%);
     transition: ease 0.2s;
     cursor: pointer;
 }
-#myH1{
+#myH1 {
     font-family: monospace;
     font-weight: bolder;
     font-size: 50px;
 }
-#required{
+#required {
     display: none;
     color: hsl(0, 100%, 30%);
 }
-#popup{
+#popup {
     display: none;
     position: relative;
     margin-left: 195px;
@@ -141,107 +180,125 @@ main{
     color: hsl(0, 0%, 10%);
     box-shadow: 2px 2px 5px black;
 }
-#checkBox{
+#checkBox {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: x-large
+    font-size: x-large;
 }
-#checkBox button{
+#checkBox button {
     padding: 5px 10px;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body{
-    background-color: hsl(0, 0%, 85%);
-}
-#boxes{
-    padding: 50px;
+#boxes {
+    padding: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
+    font-size: 12em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#box{
+#box {
+    padding: 10px;
     background-color: hsl(0, 100%, 62%);
-    font-size: 13em;
     text-align: center;
     box-shadow: 0px 0px 0px transparent;
     user-select: none;
     border-radius: 50px;
 }
-#box2{
-    width: 500px;
+#box2 {
+    padding: 10px;
     background-color: hsl(0, 100%, 62%);
-    font-size: 13em;
     text-align: center;
     box-shadow: 0px 0px 0px transparent;
     user-select: none;
     border-radius: 50px;
 }
-#box:hover{
+#box:hover {
     box-shadow: 0px 0px 50px hsl(22, 100%, 50%);
     transition: box-shadow 0.3s ease;
     cursor: pointer;
 }
-#box:active{
+#box:active {
     animation-name: glowColor, color;
     animation-duration: 1s;
     animation-iteration-count: infinite;
-    animation-timing-function:ease-in-out;
+    animation-timing-function: ease-in-out;
 }
-#box2:hover{
+#box2:hover {
     box-shadow: 0px 0px 50px hsl(22, 100%, 50%);
     transition: box-shadow 0.3s ease;
     cursor: pointer;
 }
-#box2:active{
+#box2:active {
     animation-name: fade;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-play-state: running;
     animation-iteration-count: 1;
 }
-.slideUp{  
+.slideUp {  
     animation-name: slideUp;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-play-state: running;
     animation-iteration-count: 1;
 }
-.slideLeft{
-    
+.slideLeft {
     animation-name: slideLeft;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-play-state: running;
     animation-iteration-count: 1;
 }
-@keyframes slideLeft{
-    from{transform: translateX(100%)}
+@keyframes slideLeft {
+    from { transform: translateX(100%); }
 }
-@keyframes slideUp{
-    from{transform: translateY(100%)}
+@keyframes slideUp {
+    from { transform: translateY(100%); }
 }
-@keyframes fade{
-    50%{opacity: 0}
+@keyframes fade {
+    50% { opacity: 0; }
 }
-@keyframes color{
-    0%{background-color: hsl(0, 100%, 62%)}
-    20%{background-color: hsl(36, 100%, 62%); border-radius: 50px;}
-    40%{background-color: hsl(66, 100%, 62%); border-radius: 50px;}
-    60%{background-color: hsl(135, 83%, 38%); border-radius: 50px;}
-    80%{background-color: hsl(216, 100%, 62%); border-radius: 50px;}
-    100%{background-color: hsl(283, 81%, 62%); border-radius: 50px;}
+@keyframes color {
+    0% { background-color: hsl(0, 100%, 62%); }
+    20% { background-color: hsl(36, 100%, 62%); border-radius: 50px; }
+    40% { background-color: hsl(66, 100%, 62%); border-radius: 50px; }
+    60% { background-color: hsl(135, 83%, 38%); border-radius: 50px; }
+    80% { background-color: hsl(216, 100%, 62%); border-radius: 50px; }
+    100% { background-color: hsl(283, 81%, 62%); border-radius: 50px; }
 }
-@keyframes glow{
-    0%{box-shadow: 0px 0px 50px hsl(22, 100%, 50%); border-radius: 50px;}
-    50%{box-shadow: 0px 0px 50px hsl(22, 100%, 50%); border-radius: 50px;}
-    100%{box-shadow: 0px 0px 50px hsl(22, 100%, 50%); border-radius: 50px;}
+@keyframes glow {
+    0% { box-shadow: 0px 0px 50px hsl(22, 100%, 50%); border-radius: 50px; }
+    50% { box-shadow: 0px 0px 50px hsl(22, 100%, 50%); border-radius: 50px; }
+    100% { box-shadow: 0px 0px 50px hsl(22, 100%, 50%); border-radius: 50px; }
 }
-@keyframes glowColor{  
-    0%{box-shadow: 0px 0px 50px hsl(0, 100%, 62%); border-radius: 50px;}
-    20%{box-shadow: 0px 0px 50px hsl(36, 100%, 62%); border-radius: 50px;}
-    40%{box-shadow: 0px 0px 50px hsl(66, 100%, 62%); border-radius: 50px;}
-    60%{box-shadow: 0px 0px 50px hsl(135, 83%, 38%); border-radius: 50px;}
-    80%{box-shadow: 0px 0px 50px hsl(216, 100%, 62%); border-radius: 50px;}
-    100%{box-shadow: 0px 0px 50px hsl(283, 81%, 62%); border-radius: 50px;}
+@keyframes glowColor {  
+    0% { box-shadow: 0px 0px 50px hsl(0, 100%, 62%); border-radius: 50px; }
+    20% { box-shadow: 0px 0px 50px hsl(36, 100%, 62%); border-radius: 50px; }
+    40% { box-shadow: 0px 0px 50px hsl(66, 100%, 62%); border-radius: 50px; }
+    60% { box-shadow: 0px 0px 50px hsl(135, 83%, 38%); border-radius: 50px; }
+    80% { box-shadow: 0px 0px 50px hsl(216, 100%, 62%); border-radius: 50px; }
+    100% { box-shadow: 0px 0px 50px hsl(283, 81%, 62%); border-radius: 50px; }
+}
+#darkModeBtn {
+    background-color: hsl(0, 0%, 35%);
+    color: white;
+    border-radius: 15px;
+    font-size: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+#darkModeBtn:hover {
+    background-color: hsl(0, 0%, 25%);
+}
+#darkModeBtn:active {
+    background-color: hsl(0, 0%, 45%);
+}
+#modeBtn {
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    margin-top: 100px;
+    user-select: none;
 }
