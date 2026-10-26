@@ -2,6 +2,15 @@
 if (localStorage.getItem("darkMode") === "enabled"){
     document.body.classList.add("darkMode")
 }
+window.addEventListener('DOMContentLoaded', () => {
+    const savedSize = localStorage.getItem('preferredFontSize') || 'medium';
+    changeFontSize(savedSize);
+});
+
+function changeFontSize(size) {
+    localStorage.setItem('preferredFontSize', size);
+    applyFontSize(size);
+}
 //input
 const mySubmit = document.getElementById("mySubmit");
 if(mySubmit){
@@ -111,4 +120,28 @@ if (darkModeBtn) {
             darkModeBtn.textContent = "Dark Mode";
         }
     });
+}
+
+function applyFontSize(size) {
+    const buttons = document.querySelectorAll('.fontBtn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    if (size === 'small') {
+        const smallBtn = document.getElementById('small');
+        if (smallBtn) smallBtn.classList.add('active');
+        document.body.style.fontSize = '14px';
+    } else if (size === 'medium') {
+        const medBtn = document.getElementById('med');
+        if (medBtn) medBtn.classList.add('active');
+        document.body.style.fontSize = '16px';
+    } else if (size === 'large') {
+        const bigBtn = document.getElementById('Big');
+        if (bigBtn) bigBtn.classList.add('active');
+        document.body.style.fontSize = '30px';
+    }
+}
+
+function changeFontSize(size) {
+    localStorage.setItem('preferredFontSize', size);
+    applyFontSize(size);
 }
