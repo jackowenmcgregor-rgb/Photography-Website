@@ -104,20 +104,18 @@ const darkModeBtn = document.getElementById("darkModeBtn");
 
 if (darkModeBtn) {
     if (document.body.classList.contains("darkMode")) {
-        darkModeBtn.textContent = "Light Mode";
+        darkModeBtn.checked = true;
     } else {
-        darkModeBtn.textContent = "Dark Mode";
+        darkModeBtn.checked = false;
     }
 
-    darkModeBtn.addEventListener("click", () => {
+    darkModeBtn.addEventListener("change", () => {
         document.body.classList.toggle("darkMode");
         
         if (document.body.classList.contains("darkMode")) {
             localStorage.setItem("darkMode", "enabled");
-            darkModeBtn.textContent = "Light Mode";
         } else {
             localStorage.setItem("darkMode", "disabled");
-            darkModeBtn.textContent = "Dark Mode";
         }
     });
 }
@@ -129,7 +127,7 @@ function applyFontSize(size) {
     if (size === 'small') {
         const smallBtn = document.getElementById('small');
         if (smallBtn) smallBtn.classList.add('active');
-        document.body.style.fontSize = '14px';
+        document.body.style.fontSize = '11px';
     } else if (size === 'medium') {
         const medBtn = document.getElementById('med');
         if (medBtn) medBtn.classList.add('active');
@@ -145,3 +143,15 @@ function changeFontSize(size) {
     localStorage.setItem('preferredFontSize', size);
     applyFontSize(size);
 }
+
+document.getElementById("resetBtn").addEventListener("click", function(){
+    const darkModeOption = document.getElementById("darkModeBtn");
+    if(darkModeOption){
+        darkModeOption.checked = false;
+        document.body.classList.remove("darkMode");
+    }
+    
+    changeFontSize("medium"); 
+
+    localStorage.clear();
+});
