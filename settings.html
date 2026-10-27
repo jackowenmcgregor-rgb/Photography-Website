@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Website</title>
+    <title>Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="Images/favicon.png">
 </head>
 <body>
-    <h3 id="h3">Photography Website</h3>
+    <h3 id="h3">Website</h3>
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -23,13 +23,20 @@
     </nav>
     <main>
         <div id="modeBtn">
-            <a id="darkModeBtn">Dark Mode</a>
+            <span class="labelText">Dark Mode:</span>
+            <label class="switch">
+                <input type="checkbox" id="darkModeBtn">
+                <span class="slider"></span>
+            </label>
         </div>
         <div id="fontSize">
             <label>Font Size:</label>
             <a id="small" class="fontBtn" onclick="changeFontSize('small')">Small</a>
             <a id="med" class="fontBtn active" onclick="changeFontSize('medium')">Medium</a>
             <a id="Big" class="fontBtn" onclick="changeFontSize('large')">Big</a>
+        </div>
+        <div id="reset">
+            <a id="resetBtn">Reset Settings</a>
         </div>
     </main>
     <script src="index.js"></script>
