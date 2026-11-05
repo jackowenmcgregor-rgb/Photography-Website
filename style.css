@@ -416,6 +416,7 @@ body.darkMode #darkModeBtn:hover{
 }
 video{
     width: 500px;
+    margin-top: 50px;
 }
 .video:fullscreen video{
     width: 100%;
@@ -439,6 +440,8 @@ video{
     margin-bottom: 50px;
     border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+    margin-right: 25px;
 }
 #btn1:hover, #btn2:hover{
     background-color: hsl(0, 0%, 65%);

@@ -191,16 +191,16 @@ if (autoPlayBtn) {
 
 function applyAutoPlaySetting() {
     const autoPlayPref = localStorage.getItem("autoPlay");
-    const video2 = document.getElementById("video2");
+    const video1 = document.getElementById("video1");
 
-    if (video2){
+    if (video1){
         if (autoPlayPref === "enabled") {
-            video2.autoplay = true;
-            video2.muted = true; 
+            video1.autoplay = true;
+            video1.muted = true; 
         } 
         else {
-            video2.autoplay = false;
-            video2.pause();
+            video1.autoplay = false;
+            video1.pause();
         }
     }
 }
