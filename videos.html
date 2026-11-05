@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+</head>
+<body>
+    <h3 id="h3">Website</h3>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pictures.html">Pictures</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="input.html">Input</a></li>
+            <li><a href="checkBox.html">Check Box</a></li>
+            <li><a href="animation.html">Animation</a></li>
+            <li><a href="videos.html" class="active">Videos</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="video">
+            <video src="Videos/DriftVideo.mp4" id="video1" controls></video>
+            <div class="buttons">
+                <button onclick="playPause()" id="btn1">Play/Pause</button>
+                <button onclick="fullScreen()" id="btn2">Full Screen</button>
+            </div>
+            <a href="Videos/DriftVideo.mp4" target="_blank">
+                <video src="Videos/DriftVideo.mp4" id="video2" controls autoplay muted loop></video>
+            </a>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
