@@ -26,6 +26,26 @@ function changeFontSize(size) {
     applyFontSize(size);
 }
 
+//nav bar
+fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+
+        let currentPage = window.location.pathname.split("/").pop();
+        
+        if (currentPage === "" || currentPage === "/") {
+            currentPage = "index.html";
+        }
+
+        const navLinks = document.querySelectorAll('.navbar a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('data-page') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    });
+
 //input
 const mySubmit = document.getElementById("mySubmit");
 if(mySubmit){
